@@ -1,7 +1,7 @@
 using FindYourPod.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace PodContext.Data
+namespace FindYourPod.Data
 {
     public class PodContext : DbContext
     {
