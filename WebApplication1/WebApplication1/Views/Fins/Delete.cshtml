@@ -1,0 +1,71 @@
+@model FindYourPod.Models.Fin
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Fin</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Office)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Office)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Steam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Steam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Battle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Battle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.League)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.League)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Xbox)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Xbox)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Psn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Psn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nintendo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nintendo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

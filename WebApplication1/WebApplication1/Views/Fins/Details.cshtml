@@ -1,0 +1,66 @@
+@model FindYourPod.Models.Fin
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Fin</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Office)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Office)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Steam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Steam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Battle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Battle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.League)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.League)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Xbox)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Xbox)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Psn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Psn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nintendo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nintendo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

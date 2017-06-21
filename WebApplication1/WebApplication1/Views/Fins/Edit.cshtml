@@ -1,0 +1,85 @@
+@model FindYourPod.Models.Fin
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Fin</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID" />
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Office" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Office" class="form-control" />
+                <span asp-validation-for="Office" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Steam" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Steam" class="form-control" />
+                <span asp-validation-for="Steam" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Battle" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Battle" class="form-control" />
+                <span asp-validation-for="Battle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="League" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="League" class="form-control" />
+                <span asp-validation-for="League" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Xbox" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Xbox" class="form-control" />
+                <span asp-validation-for="Xbox" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Psn" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Psn" class="form-control" />
+                <span asp-validation-for="Psn" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Nintendo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Nintendo" class="form-control" />
+                <span asp-validation-for="Nintendo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
