@@ -6,7 +6,7 @@
 
 <h2>Edit</h2>
 
-<form asp-action="Edit">
+@*<form asp-action="Edit">
     <div class="form-horizontal">
         <h4>Fin</h4>
         <hr />
@@ -74,12 +74,32 @@
             </div>
         </div>
     </div>
-</form>
+</form>*@
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="content">
+    <form class="ui form">
+        <label> Name </label>
+        <input type="text" name="name" placeholder="name">
+        <label> Office </label>
+        <input type="text" name="office" placeholder="office">
+        <label> Steam </label>
+        <input type="text" name="steam" placeholder="steam">
+        <label> PSN </label>
+        <input type="text" name="psn" placeholder="psn">
+        <label> Xbox Live </label>
+        <input type="text" name="xbox" placeholder="xbox">
+    </form>
 </div>
+<div class="actions">
+    <div class="ui green ok inverted button" id="submit-btn">
+        <i class="checkmark icon"></i>
+        Submit
+    </div>
+    </div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
