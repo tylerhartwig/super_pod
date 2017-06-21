@@ -3,10 +3,9 @@
     "",
     "\\WebApplication1",
     "\\WebApplication1\\Data",
-    "\\WebApplication1\\Views",
     "\\WebApplication1\\Views\\Home",
     "\\WebApplication1\\Views\\Shared"
   ],
-  "SelectedNode": "\\WebApplication1\\Data\\PodContext.cs",
+  "SelectedNode": "\\WebApplication1\\bin",
   "PreviewInSolutionExplorer": false
 }
