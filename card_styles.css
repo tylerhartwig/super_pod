@@ -11,5 +11,9 @@ body {
 }
 
 .ui.content {
-    padding-top: 55px;
+    padding-top: 35px;
+}
+
+.ui.stackable.cards {
+    padding-top: 10px;
 }
