@@ -9,3 +9,7 @@ body {
 .move.reveal {
     width: 100%;
 }
+
+.ui.content {
+    padding-top: 55px;
+}
