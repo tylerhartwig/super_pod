@@ -1,3 +1,8 @@
+.ui.large.secondary.inverted.pointing.menu{
+    background-color: black !important;
+    width: 100% !important;
+}
+
 .landpage-image {
         background-image: url(./background.jpg) !important;
         background-size: cover !important;
@@ -48,6 +53,11 @@
     margin: 3em 0em;
 }
 
+.ui.modal {
+    /*margin: 0 0 100px -47.5%;*/
+    top:25%;
+
+}
 .quote.stripe.segment {
     padding: 0em;
 }
