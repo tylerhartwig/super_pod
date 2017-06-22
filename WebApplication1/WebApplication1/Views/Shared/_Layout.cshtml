@@ -1,0 +1,186 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+@*<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">FindYourPod</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Fins" asp-action="Index">Fins</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>*@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Bank</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/semantic/dist/semantic.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/css/styles.css" rel="stylesheet" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css"
+              asp-fallback-href="~/lib/semantic/dist/semantic.min.css"
+              asp-fallback-test-class="transition" asp-fallback-test-property="animation-iteration-count" asp-fallback-test-value="1" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    @*start of main site body*@
+    <div class="pusher">
+        <div class="ui inverted vertical masthead center aligned segment landpage-image">
+            <div class="ui container" id="home">
+                <div class="ui fixed inverted menu" background-color="black" width="100%">
+                    <div class="">
+                        <img class="ui small image" src="~/images/logo.jpg" height="100%">
+                    </div>
+                    <div class="right item">
+                        <a class="active item" href='#home'>Home</a>
+                        <a class="item" href='#add'>Add</a>
+                        <a class="item" href='#about'>About</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ui text container">
+                <h1 class="ui header">
+                    Never Swim Alone
+                </h1>
+                <h2 class="ui header">Find Fins to game with.</h2>
+                @*<select class="ui selection dropdown">
+                    <option value="">---</option>
+                    <option value="3">PC</option>
+                    <option value="2">Nintendo Switch</option>
+                    <option value="1">PS4</option>
+                    <option value="0">Xbox One</option>
+                </select>*@
+                <div class="ui fluid multiple search normal selection dropdown">
+                    <input type="hidden" name="country">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Select Systems</div>
+                    <div class="menu">
+                        <div class="item" data-value="steam"></i>Steam</div>
+                        <div class="item" data-value="psn">PSN</div>
+                        <div class="item" data-value="xbox-live">Xbox Live</div>
+                    </div>
+                </div>
+                    <div class="ui primary button"> Search </div>
+</div>
+        </div>
+
+
+        @*body area*@
+        <div class="ui main text container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Group 1</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Link One</a>
+                        <a href="#" class="item">Link Two</a>
+                        <a href="#" class="item">Link Three</a>
+                        <a href="#" class="item">Link Four</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Group 2</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Link One</a>
+                        <a href="#" class="item">Link Two</a>
+                        <a href="#" class="item">Link Three</a>
+                        <a href="#" class="item">Link Four</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Group 3</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Link One</a>
+                        <a href="#" class="item">Link Two</a>
+                        <a href="#" class="item">Link Three</a>
+                        <a href="#" class="item">Link Four</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">Footer Header</h4>
+                    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <div class="ui horizontal inverted small divided link list">
+                <a class="item" href="#">Site Map</a>
+                <a class="item" href="#">Contact Us</a>
+                <a class="item" href="#">Terms and Conditions</a>
+                <a class="item" href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+    @* end of main site body*@
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/semantic/dist/semantic.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery">
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"
+                asp-fallback-src="~/lib/semantic/dist/js/semantic.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.site">
+
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("scripts", required: false)
+
+
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; 2017 - FindYourPod</p>
+    </footer>
+</div>
+
+<environment names="Development">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/semantic/dist/semantic.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</environment>
+<environment names="Staging,Production">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"
+            asp-fallback-src="~/lib/semantic/dist/js/semantic.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.site">
+
+    </script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+</environment>
+
+</body>
+</html>
