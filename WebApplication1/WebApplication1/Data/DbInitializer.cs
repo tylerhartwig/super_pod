@@ -18,9 +18,11 @@ namespace FindYourPod.Data
 
             var fins = new Fin[]
             {
-            new Fin{Name="Kristen Barrett",Office="Houston",Steam="lunainpurple",Battle="luescense#1366",League="NONE",Xbox="NONE",Psn="luescense",Nintendo="lolidk" },
-            new Fin{Name="Carlos Cardin",Office="Dallas",Steam="ccardin9",Battle="NONE",League="NONE",Xbox="NONE",Psn="about-9-otters",Nintendo="lolidk" },
+            new Fin{Name="Kristen Barrett", Email="kristennbarrett@gmail.com", Office="Houston", Gamernames=new[]{new Gamername{Platform="Battle",Username="luescense#1366" } } },
+            new Fin { Name = "Tyler Hartwig", Email = "Blah.com", Office = "Dallas", Gamernames = new[] { new Gamername { Platform = "Xbox", Username="Something" } } },
+            new Fin { Name = "Carlos C.", Email = "Boop.com", Office = "Dallas", Gamernames = new[]{new Gamername { Platform = "Battle", Username = "Someboop"} }}
             };
+        
             foreach (Fin f in fins)
             {
                 context.Fins.Add(f);
