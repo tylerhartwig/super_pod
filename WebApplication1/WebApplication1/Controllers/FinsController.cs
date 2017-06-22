@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FindYourPod.Data;
 using FindYourPod.Models;
+using System.Diagnostics;
 
 namespace FindYourPod.Controllers
 {
@@ -20,8 +21,10 @@ namespace FindYourPod.Controllers
         }
 
         // GET: Fins
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string tags)
         {
+            var tagArray = tags.Split(',');
+
             return View(await _context.Fins.ToListAsync());
         }
 

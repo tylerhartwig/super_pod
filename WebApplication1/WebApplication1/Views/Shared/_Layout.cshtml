@@ -60,25 +60,23 @@
                     Never Swim Alone
                 </h1>
                 <h2 class="ui header">Find Fins to game with.</h2>
-                @*<select class="ui selection dropdown">
-                    <option value="">---</option>
-                    <option value="3">PC</option>
-                    <option value="2">Nintendo Switch</option>
-                    <option value="1">PS4</option>
-                    <option value="0">Xbox One</option>
-                </select>*@
-                <div class="ui fluid multiple search normal selection dropdown">
-                    <input type="hidden" name="country">
-                    <i class="dropdown icon"></i>
-                    <div class="default text">Select Systems</div>
-                    <div class="menu">
-                        <div class="item" data-value="steam"></i>Steam</div>
-                        <div class="item" data-value="psn">PSN</div>
-                        <div class="item" data-value="xbox-live">Xbox Live</div>
+
+                
+                @using (Html.BeginForm("Index", "Fins"))
+                {
+                    <div class="ui fluid multiple search normal selection dropdown">
+                        <input type="hidden" name="tags">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Systems</div>
+                        <div class="menu">
+                            <div class="item" data-value="Steam">Steam</div>
+                            <div class="item" data-value="Psn">PSN</div>
+                            <div class="item" data-value="Xbox">Xbox Live</div>
+                        </div>
                     </div>
-                </div>
-                    <div class="ui primary button"> Search </div>
-</div>
+                    <button type="submit" class="ui primary button">Search</button> 
+                }
+            </div>
         </div>
 
 

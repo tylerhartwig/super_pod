@@ -5,7 +5,6 @@ var submitbtn = document.getElementById('submit-btn');
 var modal = document.getElementById('modal');
 
 $(document).ready(function () {
-    console.log("TEST");
     $('.ui.dropdown').dropdown();
 })
 

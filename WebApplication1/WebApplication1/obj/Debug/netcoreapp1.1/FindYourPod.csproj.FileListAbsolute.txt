@@ -7,3 +7,12 @@ C:\Users\kristen.barrett\Documents\Visual Studio 2017\Projects\WebApplication1\W
 C:\Users\kristen.barrett\Documents\Visual Studio 2017\Projects\WebApplication1\WebApplication1\obj\Debug\netcoreapp1.1\FindYourPod.dll
 C:\Users\kristen.barrett\Documents\Visual Studio 2017\Projects\WebApplication1\WebApplication1\obj\Debug\netcoreapp1.1\FindYourPod.pdb
 C:\Users\kristen.barrett\Documents\Visual Studio 2017\Projects\WebApplication1\WebApplication1\obj\Debug\netcoreapp1.1\FindYourPod.csprojResolveAssemblyReference.cache
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\bin\Debug\netcoreapp1.1\FindYourPod.deps.json
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\bin\Debug\netcoreapp1.1\FindYourPod.runtimeconfig.json
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\bin\Debug\netcoreapp1.1\FindYourPod.runtimeconfig.dev.json
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\bin\Debug\netcoreapp1.1\FindYourPod.dll
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\bin\Debug\netcoreapp1.1\FindYourPod.pdb
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\obj\Debug\netcoreapp1.1\FindYourPod.csprojResolveAssemblyReference.cache
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\obj\Debug\netcoreapp1.1\FindYourPod.AssemblyInfo.cs
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\obj\Debug\netcoreapp1.1\FindYourPod.dll
+C:\Users\tyler.hartwig\Repos\super_pod\WebApplication1\WebApplication1\obj\Debug\netcoreapp1.1\FindYourPod.pdb
