@@ -74,7 +74,25 @@
     display: none;
 }
 
-@media only screen and (max-width: 700px) {
+.visible.content {
+    background-color: white;
+    width: 100%;
+}
+
+.move.reveal {
+    width: 100%;
+}
+
+.ui.content {
+    padding-top: 35px;
+}
+
+.ui.stackable.cards {
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 700px){
+
     .ui.fixed.menu {
     display: none !important;
     }

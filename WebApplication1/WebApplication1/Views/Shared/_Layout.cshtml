@@ -43,7 +43,6 @@
     @*start of main site body*@
     <div class="pusher">
         <div class="ui inverted vertical masthead center aligned segment landpage-image">
-
             <div class="ui container" id="home">
                 <div class="ui fixed inverted menu" background-color="black" width="100%">
                     <div class="">
@@ -61,15 +60,25 @@
                     Never Swim Alone
                 </h1>
                 <h2 class="ui header">Find Fins to game with.</h2>
-                <select class="ui selection dropdown">
+                @*<select class="ui selection dropdown">
                     <option value="">---</option>
                     <option value="3">PC</option>
                     <option value="2">Nintendo Switch</option>
                     <option value="1">PS4</option>
                     <option value="0">Xbox One</option>
-                </select>
-                <div class="ui primary button"> Search </div>
-            </div>
+                </select>*@
+                <div class="ui fluid multiple search normal selection dropdown">
+                    <input type="hidden" name="country">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Select Systems</div>
+                    <div class="menu">
+                        <div class="item" data-value="steam"></i>Steam</div>
+                        <div class="item" data-value="psn">PSN</div>
+                        <div class="item" data-value="xbox-live">Xbox Live</div>
+                    </div>
+                </div>
+                    <div class="ui primary button"> Search </div>
+</div>
         </div>
 
 
@@ -144,9 +153,7 @@
     </environment>
 
     @RenderSection("scripts", required: false)
-</body>
 
-</html>
 
 <div class="container body-content">
     @RenderBody()
