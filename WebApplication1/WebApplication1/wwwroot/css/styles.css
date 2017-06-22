@@ -33,6 +33,10 @@
     font-weight: normal;
 }
 
+.twocolumn {
+	width: 50%;
+}
+
 .ui.vertical.stripe {
     padding: 8em 0em;
 }

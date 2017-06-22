@@ -10901,15 +10901,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kristen.barrett\\.nuget\\packages\\": {}
+    "C:\\Users\\carlos.cardin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kristen.barrett\\Documents\\class\\super_pod\\WebApplication1\\WebApplication1\\FindYourPod.csproj",
+      "projectUniqueName": "C:\\Users\\carlos.cardin\\Source\\Repos\\super_pod\\WebApplication1\\WebApplication1\\FindYourPod.csproj",
       "projectName": "FindYourPod",
-      "projectPath": "C:\\Users\\kristen.barrett\\Documents\\class\\super_pod\\WebApplication1\\WebApplication1\\FindYourPod.csproj",
-      "outputPath": "C:\\Users\\kristen.barrett\\Documents\\class\\super_pod\\WebApplication1\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\carlos.cardin\\Source\\Repos\\super_pod\\WebApplication1\\WebApplication1\\FindYourPod.csproj",
+      "outputPath": "C:\\Users\\carlos.cardin\\Source\\Repos\\super_pod\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
