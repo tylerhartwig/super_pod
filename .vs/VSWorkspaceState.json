@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\WebApplication1",
-    "\\WebApplication1\\WebApplication1"
+    "\\WebApplication1\\WebApplication1",
+    "\\WebApplication1\\WebApplication1\\Views",
+    "\\WebApplication1\\WebApplication1\\Views\\Home",
+    "\\WebApplication1\\WebApplication1\\wwwroot",
+    "\\WebApplication1\\WebApplication1\\wwwroot\\css"
   ],
-  "SelectedNode": "\\.DS_Store",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
