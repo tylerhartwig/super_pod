@@ -11,6 +11,8 @@ namespace FindYourPod.Models
         public string Name { get; set; }
         public string Office { get; set; }
         public string Email { get; set; }
+        public string AboutMe { get; set; }
+        public string FavoriteGames { get; set; }
         public IEnumerable<Gamername> Gamernames { get; set; }
     }
 }

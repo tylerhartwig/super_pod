@@ -7,13 +7,13 @@
 <div class="ui two stacking doubling cards" style="margin:20px;width:100%">
     @foreach (var item in Model)
     {
-    <div class="ui card">
+    <div class="ui card" style="min-height:300px">
         <div class="content">
             <img class="ui massive avatar image floated right" src="https://www.gravatar.com/avatar/@item.GravitarHash" />
             <div class="header">@item.Name</div>
             <div class="meta">@item.Office</div>
             <div class="ui move reveal">
-                <div class="visible content">
+                <div class="visible content" style="min-height:300px">
                     <div class="ui top attached blue label">
                         Usernames
                     </div>
@@ -27,15 +27,16 @@
                         }
                     </div>
                 </div>
-                <div class="hidden content">
+                <div class="hidden content" style="min-height:300px">
                     <div class="ui vertical segment">
                         <div class="content">
                             <div class="ui attached blue label">About Me</div>
-                            <p> <br /></p>
+                            <p> <br />@item.AboutMe</p>
                         </div>
                     </div>
                     <div class="ui vertical segment">
                         <div class="ui attached blue label">Favorite Games</div>
+                        <p> <br/> @item.FavoriteGames</p>
                     </div>
                 </div>
             </div>

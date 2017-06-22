@@ -58,6 +58,94 @@
         <div class="row">
             <div class="center aligned column">
                 <a class="ui huge button" id="add-btn">Add Yourself</a>
+                <!--Modal starts here-->
+                <div class="ui modal" id="modal">
+                    <div class="ui icon header">
+                        Fill gaming information
+                    </div>
+                    <div class="ui equal width form" style="padding-left: 1em;padding-right: 1em;padding-bottom: 0.2em;padding-top: 0.2em">
+                        <div class="fields">
+                            <div class="field">
+                                <label>Name</label>
+                                <input type="text" placeholder="Name">
+                            </div>
+                            <div class="field">
+                                <label>Email**</label>
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <div class="field">
+                                <label>Office</label>
+                                <input type="email" placeholder="Office">
+                            </div>
+                        </div>
+                        <div class="fields">
+                            <div class="field">
+                                <label>PlayStation</label>
+                                <input type="text" placeholder="Playstation">
+                            </div>
+                            <div class="field">
+                                <label>Xbox</label>
+                                <input type="text" placeholder="Xbox">
+                            </div>
+                            <div class="field">
+                                <label>Nintendo</label>
+                                <input type="text" placeholder="Nintendo">
+                            </div>
+                        </div>
+                        <div class="fields">
+                            <div class="field">
+                                <label>Steam</label>
+                                <input type="text" placeholder="Steam">
+                            </div>
+                            <div class="field">
+                                <label>League of Legends</label>
+                                <input type="text" placeholder="League of Legends">
+                            </div>
+                            <div class="field">
+                                <label>Origin</label>
+                                <input type="text" placeholder="Origin">
+                            </div>
+                        </div>
+                        <div class="fields">
+                            <div class="field">
+                                <label>Discord</label>
+                                <input type="text" placeholder="Discord">
+                            </div>
+                            <div class="field">
+                                <label>Battle.net</label>
+                                <input type="text" placeholder="Battle.net">
+                            </div>
+                            <div class="field">
+                                <label>Twitch</label>
+                                <input type="text" placeholder="Twitch">
+                            </div>
+                        </div>
+                        <div class="fields">
+                            <div class="field">
+                                <label>About Me</label>
+                                <input type="text" placeholder="About Me">
+                            </div>
+                            <div class="field">
+                                <label>Favorite Games</label>
+                                <input type="text" placeholder="Favorite Games">
+                            </div>
+                        </div>
+                    </div>
+                    <h5 style="text-align:center">**We promise we will not spam your email :)</h5>
+                    <div class="actions">
+                        <div class="ui red basic cancel basic button" id="cancel-btn">
+                            <i class="remove icon"></i>
+                            Cancel
+                        </div>
+                        <div class="ui green ok inverted button" id="submit-btn">
+                            <i class="checkmark icon"></i>
+                            Submit
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!--Modal ends here-->
             </div>
         </div>
     </div>
@@ -82,3 +170,4 @@
         </div>
     </div>
 </div>
+<script src="~/js/site.js"></script>
