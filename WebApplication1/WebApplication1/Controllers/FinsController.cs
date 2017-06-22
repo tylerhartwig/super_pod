@@ -10,6 +10,7 @@ using FindYourPod.Models;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
+using FindYourPod.ViewModels;
 
 namespace FindYourPod.Controllers
 {
@@ -26,9 +27,22 @@ namespace FindYourPod.Controllers
         // GET: Fins
         public async Task<IActionResult> Index(string tags)
         {
-            var tagArray = tags.Split(',');
-
-            return View(await _context.Fins.ToListAsync());
+            IEnumerable<Fin> list;
+            if (!string.IsNullOrEmpty(tags))
+            {
+                var tagArray = tags.Split(',').ToList();
+                list = _context.Fins.Include(f => f.Gamernames).AsEnumerable().Where(f => f.Gamernames?.Any(g => tagArray.Contains(g.Platform)) == true);
+            }
+            else
+            {
+                list = _context.Fins.Include(f => f.Gamernames).ToList();
+            }
+            var viewmodels = list.Select(f => new FinViewModel(f)
+            {
+                GravitarHash = HashEmailForGravatar(f.Email)
+            });
+            var test = viewmodels.ToList();
+            return View(viewmodels);
         }
 
         // GET: Fins/Details/5
@@ -55,7 +69,7 @@ namespace FindYourPod.Controllers
             MD5 md5Hasher = MD5.Create();
 
             // Convert the input string to a byte array and compute the hash.  
-            byte[] data = md5Hasher.ComputeHash(Encoding.UTF8.GetBytes(email));
+            byte[] data = md5Hasher.ComputeHash(Encoding.UTF8.GetBytes(email.ToLower().Trim()));
 
             // Create a new Stringbuilder to collect the bytes  
             // and create a string.  

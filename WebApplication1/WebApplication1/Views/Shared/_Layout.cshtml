@@ -46,16 +46,16 @@
             <div class="ui container" id="home">
                 <div class="ui fixed inverted menu" background-color="black" width="100%">
                     <div class="">
-                        <img class="ui small image" src="~/images/logo.jpg" height="100%">
+                        <img class="ui small image" src="~/images/logo.jpg" />
                     </div>
                     <div class="right item">
-                        <a class="active item" href='#home'>Home</a>
+                        <a id="home_button" class="active item" href='#home'>Home</a>
                         <a class="item" href='#add'>Add</a>
                         <a class="item" href='#about'>About</a>
                     </div>
                 </div>
             </div>
-            <div class="ui text container">
+            <div id="search_area" class="ui text container">
                 <h1 class="ui header">
                     Never Swim Alone
                 </h1>
@@ -74,14 +74,14 @@
                             <div class="item" data-value="Xbox">Xbox Live</div>
                         </div>
                     </div>
-                    <button type="submit" class="ui primary button">Search</button> 
+                    <button id="search" type="submit" class="ui primary button">Search</button> 
                 }
             </div>
         </div>
 
 
         @*body area*@
-        <div class="ui main text container">
+        <div class="ui main text container" style="margin:0px;width:100%">
             @RenderBody()
         </div>
     </div>

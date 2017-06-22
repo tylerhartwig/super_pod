@@ -1,102 +1,46 @@
-@model IEnumerable<FindYourPod.Models.Fin>
+@model IEnumerable<FindYourPod.ViewModels.FinViewModel>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<div class="ui two stacking doubling cards" style="margin:20px;width:100%">
+    @foreach (var item in Model)
+    {
+    <div class="ui card">
+        <div class="content">
+            <img class="ui massive avatar image floated right" src="https://www.gravatar.com/avatar/@item.GravitarHash" />
+            <div class="header">@item.Name</div>
+            <div class="meta">@item.Office</div>
+            <div class="ui move reveal">
+                <div class="visible content">
+                    <div class="ui top attached blue label">
+                        Usernames
+                    </div>
+                    <div class="ui hidden divider"></div>
+                    <div class="ui middle aligned list">
+                        @foreach(var gamername in item.Gamernames) { 
+                        <div class="item">
+                            <img class="ui avatar image" src="~/images/@(gamername.Platform).png" />
+                            <div class="content">@gamername.Username</div>
+                        </div>
+                        }
+                    </div>
+                </div>
+                <div class="hidden content">
+                    <div class="ui vertical segment">
+                        <div class="content">
+                            <div class="ui attached blue label">About Me</div>
+                            <p> <br /></p>
+                        </div>
+                    </div>
+                    <div class="ui vertical segment">
+                        <div class="ui attached blue label">Favorite Games</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Office)
-                </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Steam)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Battle)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.League)
-                </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Origin)
-            </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Xbox)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Psn)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Nintendo)
-                </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Discord)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Twitch)
-            </th>
-
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Office)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Steam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Battle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.League)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Origin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Xbox)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Psn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nintendo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Discord)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Twitch)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>

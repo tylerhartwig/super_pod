@@ -4,9 +4,13 @@ var submitbtn = document.getElementById('submit-btn');
 
 var modal = document.getElementById('modal');
 
+
 $(document).ready(function () {
     $('.ui.dropdown').dropdown();
 })
+
+document.getElementById("search").onclick(function () { $("#search_area").hide(); })
+document.getElementById("home").onclick(function () { $("#search_area").show(); })
 
 addbtn.addEventListener("click", function () {
     modal.classList.toggle("active");
