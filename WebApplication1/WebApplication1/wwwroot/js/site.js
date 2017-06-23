@@ -1,18 +1,16 @@
 ﻿var addbtn = document.getElementById('add-btn');
 var cancelbtn = document.getElementById('cancel-btn');
 var submitbtn = document.getElementById('submit-btn');
-
+var successAlert = document.getElementById('successAlert');
+var closeAlert = document.getElementById('closeAlert');
 var modal = document.getElementById('modal');
 
 /*$(document).ready(function () {
 	$('.ui.dropdown').dropdown();
 });*/
 
-
 addbtn.addEventListener("click", function () {
 	modal.classList.toggle("active");
-	//modal.calssList.toggle("scrolling");
-	console.log("Here");
 });
 
 cancelbtn.addEventListener("click", function () {
@@ -20,7 +18,12 @@ cancelbtn.addEventListener("click", function () {
 });
 
 submitbtn.addEventListener("click", function () {
-	//function 
+	modal.classList.toggle("active");
+	successAlert.classList.toggle("hidden");
+});
+
+closeAlert.addEventListener("click", function () {
+	successAlert.classList.toggle("hidden");
 });
 
 /*
