@@ -46,7 +46,7 @@
             <div class="ui container" id="home">
                 <div class="ui fixed inverted menu" background-color="black" width="100%">
                     <div class="">
-                        <img class="ui small image" src="~/images/logo_finished.png" />
+                        <img class="ui small image" src="~/images/logo_finished.png"/>
                     </div>
                     <div class="right item">
                         <a id="home_button" class="active item" href='#home'>Home</a>
@@ -61,7 +61,7 @@
                 </h1>
                 <h2 class="ui header">Find Fins to game with.</h2>
 
-                
+
                 @using (Html.BeginForm("Index", "Fins"))
                 {
                     <div class="ui fluid multiple search normal selection dropdown">
@@ -80,7 +80,7 @@
                             <div class="item" data-value="Twitch">Twitch</div>
                         </div>
                     </div>
-                    <button id="search" type="submit" class="ui primary button">Search</button> 
+                    <button id="search" type="submit" class="ui primary button">Search</button>
                 }
             </div>
         </div>
@@ -93,46 +93,28 @@
     </div>
 
     <div class="ui inverted vertical footer segment">
-        <div class="ui center aligned container">
-            <div class="ui stackable inverted divided grid">
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Group 1</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Link One</a>
-                        <a href="#" class="item">Link Two</a>
-                        <a href="#" class="item">Link Three</a>
-                        <a href="#" class="item">Link Four</a>
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Group 2</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Link One</a>
-                        <a href="#" class="item">Link Two</a>
-                        <a href="#" class="item">Link Three</a>
-                        <a href="#" class="item">Link Four</a>
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui inverted header">Group 3</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Link One</a>
-                        <a href="#" class="item">Link Two</a>
-                        <a href="#" class="item">Link Three</a>
-                        <a href="#" class="item">Link Four</a>
-                    </div>
-                </div>
-                <div class="seven wide column">
-                    <h4 class="ui inverted header">Footer Header</h4>
-                    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-                </div>
+        <h1 class="ui header inverted center aligned" style="padding-bottom:2em">Meet the Developers</h1>
+        <div class="ui six column grid center aligned" style="margin-left:2em;margin-right:2em">
+            <div class="column column-addon">
+                <img class="ui circular image" src="~/images/profile.jpg">
             </div>
-            <div class="ui inverted section divider"></div>
-            <div class="ui horizontal inverted small divided link list">
-                <a class="item" href="#">Site Map</a>
-                <a class="item" href="#">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
-                <a class="item" href="#">Privacy Policy</a>
+            <div class="column column-addon">
+                <p><h3 class="ui"> Tyler Hardin </h3></p>
+                <p>A back end developer dumped onto the front end (mostly) for this project. Enjoys databases and swimming with sharks. Current favorite game includes League of Legends and only League of Legends.</p>
+            </div>
+            <div class="column column-addon">
+                <img class="ui circular image" src="~/images/profile.jpg">
+            </div>
+            <div class="column column-addon">
+                <p><h3 class="ui"> Kristen Barrett </h3></p>
+                <p>A front end developer thrusted into (mostly) back end for this project. Enjoys breakfast tacos and skiing too much. Current favorite games include Overwatch, Fallout 4, and anything Kirby.</p>
+            </div>
+            <div class="column column-addon">
+                <img class="ui circular image" src="~/images/profile.jpg">
+            </div>
+            <div class="column column-addon">
+                <p><h3 class="ui"> Carlos Cardin </h3></p>
+                <p>A back end developer also thrown onto the front end (mostly) for this project. Enjoys otters. Favorite games include anything on sale on any platform.</p>
             </div>
         </div>
     </div>
@@ -159,32 +141,32 @@
     @RenderSection("scripts", required: false)
 
 
-<div class="container body-content">
-    @RenderBody()
-    <hr />
-    <footer>
-        <p>&copy; 2017 - FindYourPod</p>
-    </footer>
-</div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2017 - FindYourPod</p>
+        </footer>
+    </div>
 
-<environment names="Development">
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/semantic/dist/semantic.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-</environment>
-<environment names="Staging,Production">
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-            asp-fallback-test="window.jQuery">
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/semantic/dist/semantic.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery">
 
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"
-            asp-fallback-src="~/lib/semantic/dist/js/semantic.min.js"
-            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.site">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"
+                asp-fallback-src="~/lib/semantic/dist/js/semantic.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.site">
 
-    </script>
-    <script src="~/js/site.min.js" asp-append-version="true"></script>
-</environment>
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
 
 </body>
 </html>
