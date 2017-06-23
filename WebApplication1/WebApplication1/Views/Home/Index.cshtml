@@ -59,6 +59,8 @@
             <div class="center aligned column">
                 <a class="ui huge button" id="add-btn">Add Yourself</a>
                 <!--Modal starts here-->
+                @using (Html.BeginForm("Create", "Fins"))
+                {
                 <div class="ui modal" id="modal">
                     <div class="ui icon header">
                         Fill gaming information
@@ -67,67 +69,67 @@
                         <div class="fields">
                             <div class="field">
                                 <label>Name</label>
-                                <input type="text" placeholder="Name">
+                                <input name="name" type="text" placeholder="Name">
                             </div>
                             <div class="field">
                                 <label>Email**</label>
-                                <input type="email" placeholder="Email">
+                                <input name="email" type="email" placeholder="Email">
                             </div>
                             <div class="field">
                                 <label>Office</label>
-                                <input type="email" placeholder="Office">
+                                <input name="office" type="text" placeholder="Office">
                             </div>
                         </div>
                         <div class="fields">
                             <div class="field">
                                 <label>PlayStation</label>
-                                <input type="text" placeholder="Playstation">
+                                <input name="psn" type="text" placeholder="Playstation">
                             </div>
                             <div class="field">
                                 <label>Xbox</label>
-                                <input type="text" placeholder="Xbox">
+                                <input name="xbox" type="text" placeholder="Xbox">
                             </div>
                             <div class="field">
                                 <label>Nintendo</label>
-                                <input type="text" placeholder="Nintendo">
+                                <input name="nintendo" type="text" placeholder="Nintendo">
                             </div>
                         </div>
                         <div class="fields">
                             <div class="field">
                                 <label>Steam</label>
-                                <input type="text" placeholder="Steam">
+                                <input name="steam" type="text" placeholder="Steam">
                             </div>
                             <div class="field">
                                 <label>League of Legends</label>
-                                <input type="text" placeholder="League of Legends">
+                                <input name="league" type="text" placeholder="League of Legends">
                             </div>
                             <div class="field">
                                 <label>Origin</label>
-                                <input type="text" placeholder="Origin">
+                                <input name="origin" type="text" placeholder="Origin">
                             </div>
                         </div>
                         <div class="fields">
                             <div class="field">
                                 <label>Discord</label>
-                                <input type="text" placeholder="Discord">
+                                <input name="discord" type="text" placeholder="Discord">
                             </div>
                             <div class="field">
                                 <label>Battle.net</label>
-                                <input type="text" placeholder="Battle.net">
+                                <input name="battle" type="text" placeholder="Battle.net">
                             </div>
                             <div class="field">
                                 <label>Twitch</label>
-                                <input type="text" placeholder="Twitch">
+                                <input name="twitch" type="text" placeholder="Twitch">
                             </div>
                         </div>
                         <div class="fields">
                             <div class="field">
                                 <label>About Me</label>
-                                <input type="text" placeholder="About Me">
+                                <input name="about_me" type="text" placeholder="About Me">
                             </div>
                             <div class="field">
                                 <label>Favorite Games</label>
-                                <input type="text" placeholder="Favorite Games">
+                                <input name="favorite_games" type="text" placeholder="Favorite Games">
                             </div>
                         </div>
                     </div>
@@ -137,12 +139,13 @@
                             <i class="remove icon"></i>
                             Cancel
                         </div>
-                        <div class="ui green ok inverted button" id="submit-btn">
+                        <button class="ui green ok inverted button" id="submit-btn" type="submit">
                             <i class="checkmark icon"></i>
                             Submit
-                        </div>
+                        </button>
                     </div>
                 </div>
+                }
             </div>
 
                 <!--Modal ends here-->

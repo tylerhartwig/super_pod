@@ -13,9 +13,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\images\Battle.png" />
+    <Content Include="wwwroot\images\Discord.png" />
+    <Content Include="wwwroot\images\icon_discord.png" />
+    <Content Include="wwwroot\images\icon_nintendo.png" />
+    <Content Include="wwwroot\images\icon_psn.png" />
+    <Content Include="wwwroot\images\icon_twitch.png" />
+    <Content Include="wwwroot\images\icon_xbox.png" />
+    <Content Include="wwwroot\images\logo_finished.png" />
     <Content Include="wwwroot\images\man_in_glasses.png" />
-    <Content Include="wwwroot\images\psn.jpeg" />
+    <Content Include="wwwroot\images\Nintendo.png" />
+    <Content Include="wwwroot\images\Psn.png" />
     <Content Include="wwwroot\images\steam.png" />
+    <Content Include="wwwroot\images\superpod_logo_black.png" />
+    <Content Include="wwwroot\images\superpod_logo_white.png" />
+    <Content Include="wwwroot\images\Twitch.png" />
     <Content Include="wwwroot\images\xbox.png" />
   </ItemGroup>
   <ItemGroup>

@@ -63,6 +63,11 @@ namespace WebApplication1
                     template: "Fins/Index/{tags?}");
 
                 routes.MapRoute(
+                    name: "add",
+                    defaults: new { controller = "Fins", action = "Create" },
+                    template: "Fins/Create/{name}/{email}/{office}/{psn}/{xbox}/{nintendo}/{steam}/{league}/{origin}/{discord}/{battle}/{twitch}/{about_me}/{favorite_games}");
+
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });

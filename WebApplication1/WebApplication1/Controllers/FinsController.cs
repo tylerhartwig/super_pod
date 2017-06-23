@@ -85,27 +85,63 @@ namespace FindYourPod.Controllers
             return sBuilder.ToString();  // Return the hexadecimal string. 
         }
 
-        // GET: Fins/Create
-        public IActionResult Create()
+        private void addToGamerList(List<Gamername> list, string platform, string name)
         {
+            if (!string.IsNullOrEmpty(name))
+            {
+                list.Add(new Gamername { Platform = platform, Username = name });
+            }
+        }
+        // GET: Fins/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(string name, string email, string office,
+            string psn, string xbox, string nintendo, string steam, string league,
+            string origin, string discord, string battle, string twitch, string about_me,
+            string favorite_games)
+        {
+            var gamernames = new List<Gamername>();
+            addToGamerList(gamernames, nameof(psn), psn);
+            addToGamerList(gamernames, nameof(xbox), xbox);
+            addToGamerList(gamernames, nameof(nintendo), nintendo);
+            addToGamerList(gamernames, nameof(steam), steam);
+            addToGamerList(gamernames, nameof(league), league);
+            addToGamerList(gamernames, nameof(origin), origin);
+            addToGamerList(gamernames, nameof(discord), discord);
+            addToGamerList(gamernames, nameof(battle), battle);
+            addToGamerList(gamernames, nameof(twitch), twitch);
+
+            var newFin = new Fin
+            {
+                Name = name,
+                Email = email,
+                Office = office,
+                AboutMe = about_me,
+                FavoriteGames = favorite_games,
+                Gamernames = gamernames
+
+            };
+
+            _context.Add(newFin);
+            await _context.SaveChangesAsync();
             return View();
         }
 
         // POST: Fins/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Office,Steam,Battle,League,Xbox,Psn,Nintendo")] Fin fin)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(fin);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
-            return View(fin);
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("ID,Name,Office,Steam,Battle,League,Xbox,Psn,Nintendo")] Fin fin)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.Add(fin);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(fin);
+        //}
 
         // GET: Fins/Edit/5
         public async Task<IActionResult> Edit(int? id)
